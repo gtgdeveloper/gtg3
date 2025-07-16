@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>GTG Token Supply</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 20px;
+    }
+    p.note {
+      color: cyan;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    a {
+      color: cyan;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Total GTG Tokens Outstanding:</h2>
+  <div id="output">Loading...</div>
+
+  <p class="note">All proceeds from the game will go towards burning events! on the GTG game</p>
+  <p class="note">
+    Please visit
+    <a href="https://getthegirl.io" target="_blank">getthegirl.io</a> for more info
+  </p>
+
+  <!-- Solana Web3 and SPL Token IIFE Libraries -->
+  <script src="https://unpkg.com/@solana/web3.js@1.93.5/lib/index.iife.js"></script>
+  <script src="https://unpkg.com/@solana/spl-token@0.3.5/lib/index.iife.js"></script>
+
+  <script>
+    const connection = new 
+solanaWeb3.Connection("https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4");
+    const GTG_MINT = new solanaWeb3.PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+    const output = document.getElementById("output");
+
+    async function getSupply() {
+      try {
+        const mintInfo = await splToken.getMint(connection, GTG_MINT);
+        const supply = Number(mintInfo.supply) / 10 ** mintInfo.decimals;
+        output.textContent = supply.toLocaleString() + " GTG";
+      } catch (err) {
+        output.textContent = "Error loading GTG supply.";
+        console.error(err);
+      }
+    }
+
+    getSupply();
+  </script>
+</body>
+</html>
+
