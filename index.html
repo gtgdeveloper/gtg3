@@ -1,27 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Get the Girl - GTG</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Get the Girl v.6</title>
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+
+
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
-  <div id="game-container">
-    <video id="intro-video" width="100%" autoplay muted playsinline>
-      <source src="intro.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-
-    <div id="chat-container" style="display: none;">
-      <div id="messages"></div>
-      <input type="text" id="user-input" placeholder="Talk to Monique..." autocomplete="off" />
+  <div id="game">
+    <div id="video-frame">
+      <video id="video" width="480" height="270" muted></video>
     </div>
+    <div id="stats">
+      <div>Score: <span id="score">0</span></div>
+      <div>Inventory: <span id="inventory">None</span></div>
+      <div>Timer: <span id="timer">100</span>s</div>
+    </div>
+    <div id="output"></div>
+    <input id="input" type="text" placeholder="Say something..." autofocus />
+<p id="proceeds-note" style="color: lime; font-size: 14px; margin-top: 10px;">
+  All proceeds from the game will go towards burning events! on the GTG game
+</p>
+<p id="info-link" style="color: cyan; font-size: 14px; margin-top: 4px;">
+  Please visit <a href="https://getthegirl.io" target="_blank" style="color: cyan; text-decoration: 
+underline;">getthegirl.io</a> for more info
+</p>
 
-    <p id="proceeds-note" style="color: lime; font-size: 14px; margin-top: 10px;">
-      All proceeds from the game will go towards burning events! on the GTG game
-    </p>
-    <p style="color: lime; font-size: 14px; margin-top: 4px;">
-      This game uses only Phantom Wallet and Solana. For more info on the token visit:
-      <a href="https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5" target="_blank" style="color: lime; text-decoration: underline;">
 
+  </div>
+  <script src="main.js"></script>
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+
+</body>
+</html>
