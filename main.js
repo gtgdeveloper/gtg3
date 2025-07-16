@@ -1697,7 +1697,8 @@ input.disabled = true;
     chatHistory.push({ role: "user", content: text });
 
 try {
-  const response = await fetch("http://localhost:3001/api/ask", {
+  const response = await fetch("https://gtg3.onrender.com/api/ask", {
+, {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
