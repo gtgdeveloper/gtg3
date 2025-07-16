@@ -1698,7 +1698,7 @@ input.disabled = true;
 
 try {
   const response = await fetch("https://gtg3.onrender.com/api/ask", {
-, {
+ 
   method: "POST",
   headers: {
     "Content-Type": "application/json"
