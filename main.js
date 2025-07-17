@@ -1657,7 +1657,7 @@ if (!triggeredGym && /\b(gym|work ?out|exercise|fitness)\b/i.test(text) && /\b(l
 } 
 
 
-if (score === 4 && !rechargeTriggered) {
+if (score === 7 && !rechargeTriggered) {
   rechargeTriggered = true;
   awaitingRechargeChoice = true;
 
@@ -1683,7 +1683,7 @@ if (score === 4 && !rechargeTriggered) {
 }
 
 
-if (score > 7 && level === 0) {
+if (score > 10 && level === 0) {
   level = 1;
 input.disabled = true;
 
