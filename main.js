@@ -1557,7 +1557,7 @@ if (/modir/i.test(text)) {
     }
 if (/johnny/i.test(text)) {
     	
-      video.src = "johnny.mov";
+      video.src = "johnny.mp4";
       video.play().catch(err => console.warn("Video error:", err));
       appendMessage("assistant", "Giovanni Santo is king! ");
       score++;
