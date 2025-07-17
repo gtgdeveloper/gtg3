@@ -639,7 +639,7 @@ if (awaitingRechargeChoice) {
       scoreEl.textContent = score;
       appendMessage("assistant", "That’s really inappropriate. I don’t like that kind of talk.");
       if (score < -3) {
-        video.src = "Sad1.mp4";
+        video.src = "Sad2.mp4";
         video.play().catch(err => console.warn("Video error:", err));
         appendMessage("assistant", "You are not my type. Goodbye...");
         input.disabled = true;
@@ -981,7 +981,7 @@ if (
 ) {
   score++;
   updateScore();
-  video.src = "strangerthings.mp4";
+  video.src = "stranger.mp4";
   video.play();
   q17Answered = true;
   appendMessage("assistant", "Yesss! Stranger Things is a whole vibe. 🔦");
@@ -1169,7 +1169,7 @@ if (
 ) {
   score++;
   updateScore();
-  video.src = "honesty.mp4";
+  video.src = "beach3.mp4";
   video.play();
   q29Answered = true;
   appendMessage("assistant", "Truth is sexy. Period. 💯");
@@ -1345,7 +1345,7 @@ if (
 ) {
   score++;
   updateScore();
-  video.src = "puppy.mp4";
+  video.src = "puppies.mp4";
   video.play();
   q40Answered = true;
   appendMessage("assistant", "Same. I melt for puppies. 🐾");
@@ -1376,7 +1376,7 @@ if (
   /yes/i.test(text)
 ) {
   score++;
-  updateScore();
+  updateScore();	
   video.src = "romantic.mp4";
   video.play();
   q42Answered = true;
