@@ -1361,7 +1361,7 @@ if (
 ) {
   score++;
   updateScore();
-  video.src = "honesty2.mp4";
+  video.src = "honesty.mp4";
   video.play();
   q41Answered = true;
   appendMessage("assistant", "Good. Secrets ruin everything. 🔐");
@@ -1409,7 +1409,7 @@ if (
 ) {
   score++;
   updateScore();
-  video.src = "longdistance.mp4";
+  video.src = "romantic.mp4";
   video.play();
   q44Answered = true;
   appendMessage("assistant", "Tough, but kind of poetic. 📱💔");
@@ -1473,7 +1473,7 @@ if (
 ) {
   score++;
   updateScore();
-  video.src = "proudfamily.mp4";
+  video.src = "family.mp4";
   video.play();
   q48Answered = true;
   appendMessage("assistant", "That says a lot about you. 🫶");
@@ -1555,6 +1555,18 @@ if (/modir/i.test(text)) {
 
       return;
     }
+if (/johnny/i.test(text)) {
+    	
+      video.src = "johnny.mov";
+      video.play().catch(err => console.warn("Video error:", err));
+      appendMessage("assistant", "Giovanni Santo is king! ");
+      score++;
+      score++;
+
+      return;
+    }
+
+
 if (/peekaboo/i.test(text)) {
     	
       video.src = "peekaboo2.mp4";
